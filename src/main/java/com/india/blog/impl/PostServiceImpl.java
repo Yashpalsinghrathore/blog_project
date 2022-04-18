@@ -78,7 +78,6 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public PostDto getPostById(Integer id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
