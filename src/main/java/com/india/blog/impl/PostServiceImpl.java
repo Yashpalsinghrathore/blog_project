@@ -78,8 +78,8 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public PostDto getPostById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Post post = postRepo.findById(id).orElseThrow(()->new ResourseNotFoundException("Post","postId",id));
+		return this.modelMapper.map(post,PostDto.class);
 	}
 
 	@Override
